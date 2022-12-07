@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Episode(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, null=True)
     description = models.TextField()
     pub_date = models.DateTimeField()
     link = models.URLField()
