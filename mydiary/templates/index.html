@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <a href="{% url 'entry-list' %}"><div class="card c1">Diary</div></a>
+    <a href="{% url 'index' %}"><div class="card c2">TODO</div></a>
+    <a href="{% url 'card-list' %}"><div class="card c3">Flash Cards</div></a>
+    <a href="{% url 'homepage' %}"><div class="card c4">Pycasts</div></a>
+</div>
+
+
+
+
+
+
+</body>
+</html>
