@@ -56,9 +56,9 @@ class Command(BaseCommand):
             fetch_realpython_episodes,
             trigger="interval",
             minutes=2,
-            id="The Real Python Podcast",  # Each job MUST have a unique ID
+            id="The Real Python Podcast",
             max_instances=1,
-            # Replaces existing and stops duplicates on restart of the app.
+
             replace_existing=True,
         )
         logger.info("Added job: The Real Python Podcast.")
@@ -77,7 +77,7 @@ class Command(BaseCommand):
             delete_old_job_executions,
             trigger=CronTrigger(
                 day_of_week="mon", hour="00", minute="00"
-            ),  # Midnight on Monday, before start of the next work week.
+            ),
             id="Delete Old Job Executions",
             max_instances=1,
             replace_existing=True,
