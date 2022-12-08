@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 def save_new_episodes(feed):
 
-    podcast_title = feed.channel.title
+    podcast_title = feed.channel.title if feed.channel.title else 'null'
     podcast_image = feed.channel.image["href"]
 
     for item in feed.entries:
